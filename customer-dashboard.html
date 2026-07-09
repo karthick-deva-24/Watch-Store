@@ -11,12 +11,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
+    <!-- Dashboard Mobile Header -->
+    <div class="db-mobile-header">
+        <button class="db-menu-toggle" aria-label="Toggle Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12" class="line-mid"></line>
+                <line x1="3" y1="6" x2="21" y2="6" class="line-top"></line>
+                <line x1="3" y1="18" x2="21" y2="18" class="line-bot"></line>
+            </svg>
+        </button>
+        <a href="index.html" class="db-logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+        <div class="db-mobile-avatar" style="width: 32px; height: 32px; border-radius: 50%; background: var(--accent-gold); color: var(--bg-primary); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 600;">AV</div>
+    </div>
 
     <div class="db-container">
         <!-- Sidebar Navigation -->
         <aside class="db-sidebar">
             <div class="db-sidebar-top">
-                <a href="index.html" class="db-logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+                <div class="db-sidebar-header">
+                    <a href="index.html" class="db-logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+                    <button class="db-sidebar-close" aria-label="Close Menu">&times;</button>
+                </div>
                 
                 <nav class="db-nav">
                     <a href="#collection" class="db-nav-link active">
@@ -72,10 +87,16 @@
                     <h2>Collector Atelier</h2>
                     <p>Welcome back, Mr. Vance. Access your certified Swiss watch vault.</p>
                 </div>
-                <button class="db-logout-btn" onclick="location.href='login.html';">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
-                    <span>Logout</span>
-                </button>
+                <div class="db-header-actions" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                    <button class="db-action-btn" onclick="const old=this.innerHTML; this.innerHTML='Refreshing...'; setTimeout(()=>this.innerHTML=old, 2000);">
+                        <svg viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                        <span>Refresh Vault</span>
+                    </button>
+                    <button class="db-logout-btn" onclick="location.href='login.html';">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+                        <span>Logout</span>
+                    </button>
+                </div>
             </header>
 
             <!-- Tab 1: Collection -->
@@ -107,25 +128,37 @@
 
                     <div class="db-watch-grid">
                         <!-- Watch 1 -->
-                        <div class="watch-card glass-panel" style="margin: 0; background: rgba(255,255,255,0.01);">
-                            <span class="watch-badge" style="background-color: var(--accent-gold); color: var(--bg-primary);">Vaulted</span>
-                            <div class="watch-card-img-wrapper">
-                                <img src="assets/model-classic.webp" alt="Stackly Classic Gold">
+                        <div class="watch-card glass-panel" style="margin: 0; background: rgba(255,255,255,0.01); display: flex; flex-direction: column; justify-content: space-between; min-height: 480px;">
+                            <div>
+                                <span class="watch-badge" style="background-color: var(--accent-gold); color: var(--bg-primary);">Vaulted</span>
+                                <div class="watch-card-img-wrapper" style="margin: 30px auto 15px auto;">
+                                    <img src="assets/model-classic.webp" alt="Stackly Classic Gold">
+                                </div>
+                                <h4>Classic Gold</h4>
+                                <span class="collection-name">Acquired June 2024</span>
+                                <span class="price" style="display: block; margin-bottom: 15px;">$1,450.00</span>
                             </div>
-                            <h4>Classic Gold</h4>
-                            <span class="collection-name">Acquired June 2024</span>
-                            <span class="price">$1,450.00</span>
+                            <div class="card-action-buttons" style="display: flex; flex-direction: column; gap: 8px; width: 100%; padding-top: 10px; border-top: 1px solid var(--border-light);">
+                                <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Valuation Sent!'; setTimeout(()=>this.textContent=old, 2000);" style="justify-content: center;">Certified Valuation</button>
+                                <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Key Copied!'; setTimeout(()=>this.textContent=old, 2000);" style="justify-content: center;">Copy Ownership Key</button>
+                            </div>
                         </div>
 
                         <!-- Watch 2 -->
-                        <div class="watch-card glass-panel" style="margin: 0; background: rgba(255,255,255,0.01);">
-                            <span class="watch-badge" style="background-color: var(--accent-gold); color: var(--bg-primary);">Vaulted</span>
-                            <div class="watch-card-img-wrapper">
-                                <img src="assets/model-chrono.webp" alt="Stackly Chronograph Steel">
+                        <div class="watch-card glass-panel" style="margin: 0; background: rgba(255,255,255,0.01); display: flex; flex-direction: column; justify-content: space-between; min-height: 480px;">
+                            <div>
+                                <span class="watch-badge" style="background-color: var(--accent-gold); color: var(--bg-primary);">Vaulted</span>
+                                <div class="watch-card-img-wrapper" style="margin: 30px auto 15px auto;">
+                                    <img src="assets/model-chrono.webp" alt="Stackly Chronograph Steel">
+                                </div>
+                                <h4>Chronograph Steel</h4>
+                                <span class="collection-name">Acquired Oct 2025</span>
+                                <span class="price" style="display: block; margin-bottom: 15px;">$1,850.00</span>
                             </div>
-                            <h4>Chronograph Steel</h4>
-                            <span class="collection-name">Acquired Oct 2025</span>
-                            <span class="price">$1,850.00</span>
+                            <div class="card-action-buttons" style="display: flex; flex-direction: column; gap: 8px; width: 100%; padding-top: 10px; border-top: 1px solid var(--border-light);">
+                                <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Valuation Sent!'; setTimeout(()=>this.textContent=old, 2000);" style="justify-content: center;">Certified Valuation</button>
+                                <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Key Copied!'; setTimeout(()=>this.textContent=old, 2000);" style="justify-content: center;">Copy Ownership Key</button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -134,22 +167,30 @@
             <!-- Tab 2: Guarantee Registry -->
             <div id="registry-tab" class="db-tab-content">
                 <section class="glass-panel db-visual-box" data-aos="fade-up" id="registry">
-                    <div class="db-card-header" style="width: 100%;">
+                    <div class="db-card-header" style="width: 100%; flex-wrap: wrap; gap: 15px;">
                         <h4>Guarantee Card</h4>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Key Requested!'; setTimeout(()=>this.textContent=old, 2000);">Register New Serial</button>
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Warranty Extended!'; setTimeout(()=>this.textContent=old, 2000);">Extend Atelier Warranty</button>
+                        </div>
                     </div>
                     <img src="assets/customer-cert.webp" alt="Swiss Guarantee Certificate Card" class="db-visual-img">
                     <span style="font-size: 0.75rem; letter-spacing: 0.15em; color: var(--accent-gold); text-transform: uppercase;">Ownership Certified</span>
                     <h5 style="margin: 10px 0 5px 0; font-size: 1.1rem; font-weight: 500;">Secured Serial Vault</h5>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">This certificate guarantees the authenticity and calibration registry of your Stackly collection.</p>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: center; max-width: 440px;">This certificate guarantees the authenticity and calibration registry of your Stackly collection.</p>
                 </section>
             </div>
 
             <!-- Tab 3: Service Status -->
             <div id="service-tab" class="db-tab-content">
                 <section class="glass-panel" style="padding: 40px; margin-bottom: 20px;" data-aos="fade-up" id="service">
-                    <div class="db-card-header">
+                    <div class="db-card-header" style="flex-wrap: wrap; gap: 15px;">
                         <h4>Boutique Calibration & Servicing Queue</h4>
-                        <a href="service.html#booking">Book Calibration</a>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Courier Booked!'; setTimeout(()=>this.textContent=old, 2000);">Book Courier Pickup</button>
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Watchmaker Alerted!'; setTimeout(()=>this.textContent=old, 2000);">Message Watchmaker</button>
+                            <a href="service.html#booking" style="font-size: 0.85rem; color: var(--accent-gold); text-decoration: none;">Book Calibration</a>
+                        </div>
                     </div>
 
                     <div class="db-table-wrapper">
@@ -185,6 +226,9 @@
             </div>
         </main>
     </div>
+
+    <!-- Sidebar backdrop overlay -->
+    <div class="db-sidebar-overlay" id="dbSidebarOverlay"></div>
 
     <!-- GSAP and AOS Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

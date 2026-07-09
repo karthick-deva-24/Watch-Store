@@ -11,12 +11,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
+    <!-- Dashboard Mobile Header -->
+    <div class="db-mobile-header">
+        <button class="db-menu-toggle" aria-label="Toggle Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12" class="line-mid"></line>
+                <line x1="3" y1="6" x2="21" y2="6" class="line-top"></line>
+                <line x1="3" y1="18" x2="21" y2="18" class="line-bot"></line>
+            </svg>
+        </button>
+        <a href="index.html" class="db-logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+        <div class="db-mobile-avatar" style="width: 32px; height: 32px; border-radius: 50%; background: var(--accent-gold); color: var(--bg-primary); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 600;">AD</div>
+    </div>
 
     <div class="db-container">
         <!-- Sidebar Navigation -->
         <aside class="db-sidebar">
             <div class="db-sidebar-top">
-                <a href="index.html" class="db-logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+                <div class="db-sidebar-header">
+                    <a href="index.html" class="db-logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+                    <button class="db-sidebar-close" aria-label="Close Menu">&times;</button>
+                </div>
                 
                 <nav class="db-nav">
                     <a href="#overview" class="db-nav-link active">
@@ -70,10 +85,20 @@
                     <h2>Boutique Management</h2>
                     <p>Geneva HQ Workshop Dashboard. Calibrating operations, inventory, and logistics.</p>
                 </div>
-                <button class="db-logout-btn" onclick="location.href='login.html';">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
-                    <span>Logout</span>
-                </button>
+                <div class="db-header-actions" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                    <button class="db-action-btn" onclick="const old=this.innerHTML; this.innerHTML='Exporting...'; setTimeout(()=>this.innerHTML=old, 2000);">
+                        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        <span>Export CSV</span>
+                    </button>
+                    <button class="db-action-btn" onclick="const old=this.innerHTML; this.innerHTML='Refreshing...'; setTimeout(()=>this.innerHTML=old, 2000);">
+                        <svg viewBox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                        <span>System Log</span>
+                    </button>
+                    <button class="db-logout-btn" onclick="location.href='login.html';">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+                        <span>Logout</span>
+                    </button>
+                </div>
             </header>
 
             <!-- Tab 1: Overview -->
@@ -106,6 +131,10 @@
                 <section class="glass-panel" style="padding: 35px; margin-bottom: 20px;" data-aos="fade-up">
                     <div class="db-card-header">
                         <h4>Custom Commissions</h4>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Ledger Printed!'; setTimeout(()=>this.textContent=old, 2000);">Print Ledger</button>
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Archived!'; setTimeout(()=>this.textContent=old, 2000);">Archive All</button>
+                        </div>
                     </div>
 
                     <div class="db-table-wrapper">
@@ -137,13 +166,29 @@
                         </table>
                     </div>
                 </section>
+
+                <!-- Quick Atelier Utilities -->
+                <section class="glass-panel" style="padding: 35px; margin-bottom: 20px;" data-aos="fade-up">
+                    <div class="db-card-header">
+                        <h4>Quick Atelier Utilities</h4>
+                    </div>
+                    <div class="db-btn-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <button class="btn-secondary" onclick="const old=this.textContent; this.textContent='Calibrating...'; setTimeout(()=>this.textContent=old, 2000);" style="padding: 12px 20px; font-size: 0.85rem;">Calibrate Balance Wheel</button>
+                        <button class="btn-secondary" onclick="const old=this.textContent; this.textContent='Key Generated!'; setTimeout(()=>this.textContent=old, 2000);" style="padding: 12px 20px; font-size: 0.85rem;">Generate Serial ID</button>
+                        <button class="btn-secondary" onclick="const old=this.textContent; this.textContent='Database Backed Up!'; setTimeout(()=>this.textContent=old, 2000);" style="padding: 12px 20px; font-size: 0.85rem;">Backup Swiss Database</button>
+                    </div>
+                </section>
             </div>
 
             <!-- Tab 2: Inventory Manager -->
             <div id="inventory-tab" class="db-tab-content">
                 <section class="glass-panel" style="padding: 40px; margin-bottom: 20px;" data-aos="fade-up" id="inventory">
-                    <div class="db-card-header">
+                    <div class="db-card-header" style="flex-wrap: wrap; gap: 15px;">
                         <h4>Inventory Manager (Active Catalog Models)</h4>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Watch Added!'; setTimeout(()=>this.textContent=old, 2000);">+ Add Watch Model</button>
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Prices Adjusted!'; setTimeout(()=>this.textContent=old, 2000);">Bulk Adjust Prices</button>
+                        </div>
                     </div>
 
                     <div class="db-table-wrapper">
@@ -223,8 +268,12 @@
             <!-- Tab 3: Calibrations Queue -->
             <div id="calibrations-tab" class="db-tab-content">
                 <section class="glass-panel" style="padding: 40px; margin-bottom: 20px;" data-aos="fade-up" id="calibrations">
-                    <div class="db-card-header">
+                    <div class="db-card-header" style="flex-wrap: wrap; gap: 15px;">
                         <h4>Boutique Calibration & Servicing Tickets</h4>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Ticket Created!'; setTimeout(()=>this.textContent=old, 2000);">Log Service Ticket</button>
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Report Printed!'; setTimeout(()=>this.textContent=old, 2000);">Print Calibration Specs</button>
+                        </div>
                     </div>
 
                     <div class="db-table-wrapper">
@@ -269,8 +318,12 @@
             <!-- Tab 4: Boutique Analytics -->
             <div id="customs-tab" class="db-tab-content">
                 <section class="glass-panel db-visual-box" data-aos="fade-up" id="customs">
-                    <div class="db-card-header" style="width: 100%;">
+                    <div class="db-card-header" style="width: 100%; flex-wrap: wrap; gap: 15px;">
                         <h4>Boutique Allocation & Sales Analytics</h4>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='PDF Exported!'; setTimeout(()=>this.textContent=old, 2000);">Download PDF Report</button>
+                            <button class="db-action-btn" onclick="const old=this.textContent; this.textContent='Date Filtered!'; setTimeout(()=>this.textContent=old, 2000);">Timeframe: Last 30 Days</button>
+                        </div>
                     </div>
                     <img src="assets/admin-analytics.webp" alt="Atelier Sales Analytics Charts" class="db-visual-img">
                     <span style="font-size: 0.75rem; letter-spacing: 0.15em; color: var(--accent-gold); text-transform: uppercase;">Live Graphic Feed</span>
@@ -280,6 +333,9 @@
             </div>
         </main>
     </div>
+
+    <!-- Sidebar backdrop overlay -->
+    <div class="db-sidebar-overlay" id="dbSidebarOverlay"></div>
 
     <!-- GSAP and AOS Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

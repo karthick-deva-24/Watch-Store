@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDashboardTabs();
     loadUserProfile();
     initMobileMenu();
+    initDashboardMobileMenu();
 });
 
 /* --------------------------------------------------------------------------
@@ -298,7 +299,7 @@ function initBookingForm() {
             setTimeout(() => {
                 wrapper.innerHTML = `
                     <div style="text-align: center; padding: 40px 20px; animation: fadeIn 0.6s ease forwards;">
-                        <div style="font-size: 3.5rem; color: var(--accent-gold); margin-bottom: 25px;">✓</div>
+                        <div style="font-size: 3.5rem; color: var(--accent-gold); margin-bottom: 25px;"><i class="fa-solid fa-circle-check"></i></div>
                         <h3 style="margin-bottom: 15px; font-size: 1.8rem; font-family: var(--font-heading);">Reservation Confirmed</h3>
                         <p style="margin-bottom: 30px; font-size: 0.95rem; color: var(--text-secondary); max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.6;">
                             Dear ${name}, your booking request for the <strong>${serviceType}</strong> on your <strong>${watchModel}</strong> has been received. A courier link and instructions have been sent to <strong>${email}</strong>.
@@ -492,42 +493,7 @@ function initCartDrawerEvents() {
         checkoutBtn.addEventListener('click', () => {
             overlay.classList.remove('active');
             document.body.style.overflow = '';
-            
-            const modal = document.createElement('div');
-            modal.style.position = 'fixed';
-            modal.style.top = '0';
-            modal.style.left = '0';
-            modal.style.width = '100%';
-            modal.style.height = '100%';
-            modal.style.background = 'rgba(7, 7, 7, 0.95)';
-            modal.style.zIndex = '9999';
-            modal.style.display = 'flex';
-            modal.style.alignItems = 'center';
-            modal.style.justifyContent = 'center';
-            modal.style.opacity = '0';
-            modal.style.transition = 'opacity 0.4s ease';
-
-            modal.innerHTML = `
-                <div class="glass-panel" style="padding: 50px; text-align: center; max-width: 500px; border-color: var(--accent-gold);">
-                    <div style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px;">✓</div>
-                    <h3 style="margin-bottom: 15px; font-size: 1.8rem;">Order Placed</h3>
-                    <p style="margin-bottom: 30px; font-size: 0.95rem;">Thank you for your order. We have received your request, and a private client advisor will contact you shortly to finalize shipping details and serial registration.</p>
-                    <button class="btn-primary" id="closeOrderModal">Close</button>
-                </div>
-            `;
-
-            document.body.appendChild(modal);
-            setTimeout(() => modal.style.opacity = '1', 50);
-
-            document.getElementById('closeOrderModal').addEventListener('click', () => {
-                modal.style.opacity = '0';
-                setTimeout(() => {
-                    modal.remove();
-                    cart = [];
-                    saveCart();
-                    updateCartUI();
-                }, 400);
-            });
+            window.location.href = '404.html';
         });
     }
 }
@@ -1175,6 +1141,54 @@ function initMobileMenu() {
             menuToggle.classList.remove('active');
             navMenu.classList.remove('active');
         });
+    });
+}
+
+/* --------------------------------------------------------------------------
+   Dashboard Mobile Drawer Navigation Menu
+   -------------------------------------------------------------------------- */
+function initDashboardMobileMenu() {
+    const menuToggle = document.querySelector('.db-menu-toggle');
+    const sidebar = document.querySelector('.db-sidebar');
+    const overlay = document.getElementById('dbSidebarOverlay');
+    const closeBtn = document.querySelector('.db-sidebar-close');
+    const navLinks = document.querySelectorAll('.db-nav-link');
+
+    if (!menuToggle || !sidebar) return;
+
+    function openMenu() {
+        menuToggle.classList.add('active');
+        sidebar.classList.add('active');
+        if (overlay) overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        menuToggle.classList.remove('active');
+        sidebar.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', () => {
+        if (sidebar.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+    }
+
+    // Close sidebar when a dashboard navigation tab is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
     });
 }
 

@@ -1043,9 +1043,13 @@ header.scrolled {
     transition: var(--transition-smooth);
 }
 
-.footer-socials a svg {
+.footer-socials a svg, .footer-socials a i {
     width: 18px;
     height: 18px;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-socials a:hover {
@@ -1705,6 +1709,7 @@ header.header-solid {
     color: var(--text-muted);
     cursor: pointer;
     transition: var(--transition-fast);
+    white-space: nowrap;
 }
 .login-tab-btn.active {
     color: var(--text-primary);
@@ -1817,6 +1822,8 @@ header.header-solid {
     }
     .login-section {
         flex-direction: column;
+        height: auto;
+        min-height: 100vh;
     }
     .login-left {
         display: none; /* Hide craftsmanship panel on mobile/tablet to keep login clean */
@@ -2516,37 +2523,194 @@ header.header-solid {
     gap: 30px;
 }
 
+/* Dashboard action buttons */
+.db-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    background: transparent;
+}
+.db-action-btn:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    background: rgba(212, 175, 55, 0.03);
+}
+.db-action-btn svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 2px;
+    fill: none;
+}
+
+/* Button Outline Alias */
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-primary);
+    padding: 13px 35px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-light);
+}
+.btn-outline:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    transform: translateY(-2px);
+}
+
+/* Dashboard Sidebar Header & Close (Desktop defaults) */
+.db-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.db-sidebar-close {
+    display: none;
+}
+
+/* Dashboard Mobile Header & Overlay (Desktop hidden) */
+.db-mobile-header {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-light);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 999;
+}
+.db-mobile-header .db-logo img {
+    height: 32px;
+    width: auto;
+}
+.db-menu-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.db-menu-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+.db-menu-toggle line {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+.db-menu-toggle.active .line-mid {
+    opacity: 0;
+}
+.db-menu-toggle.active .line-top {
+    transform: translateY(6px) rotate(45deg);
+}
+.db-menu-toggle.active .line-bot {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.db-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+.db-sidebar-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* Dashboard responsiveness */
 @media (max-width: 1024px) {
+    .db-mobile-header {
+        display: flex;
+    }
     .db-container {
         grid-template-columns: 1fr;
         height: auto;
         overflow: visible;
+        padding-top: 70px; /* Offset for fixed header */
     }
     .db-main {
         height: auto;
         overflow-y: visible;
+        padding: 30px 5%;
     }
     .db-sidebar {
-        height: auto;
-        position: relative;
-        padding: 25px 5%;
-        border-right: none;
-        border-bottom: 1px solid var(--border-light);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        background: rgba(5, 5, 5, 0.98);
+        border-right: 1px solid var(--border-light);
+        padding: 30px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .db-sidebar.active {
+        transform: translateX(0);
+        box-shadow: 15px 0 30px rgba(0, 0, 0, 0.5);
+    }
+    .db-sidebar-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        color: var(--text-secondary);
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 5px;
+        transition: var(--transition-fast);
+        line-height: 1;
+    }
+    .db-sidebar-close:hover {
+        color: var(--accent-gold);
     }
     .db-sidebar-top {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
+        gap: 30px;
     }
     .db-nav {
-        flex-direction: row;
-        gap: 10px;
+        flex-direction: column;
+        gap: 15px;
     }
     .db-user-panel {
-        border-top: none;
-        padding-top: 0;
+        border-top: 1px solid var(--border-light);
+        padding-top: 25px;
     }
     .db-row {
         grid-template-columns: 1fr;
@@ -2554,18 +2718,17 @@ header.header-solid {
 }
 
 @media (max-width: 768px) {
-    .db-sidebar-top {
+    .db-main {
+        padding: 25px 4%;
+    }
+    .db-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+        gap: 15px;
+        margin-bottom: 30px;
     }
-    .db-nav {
+    .db-logout-btn {
         width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 5px;
-    }
-    .db-main {
-        padding: 35px 5%;
+        justify-content: center;
     }
 }
