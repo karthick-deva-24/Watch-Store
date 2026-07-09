@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in or register for your Stackly collector account. Track your timepiece orders, service status, and access exclusive allocations.">
+    <title>Collector Portal | Stackly</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Scroll Animations CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header-solid">
+        <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="collection.html" class="nav-link">Collection</a>
+            <a href="service.html" class="nav-link">Services</a>
+        </nav>
+        
+        <div class="header-actions">
+            <a href="login.html" class="active">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M5 20c0-4 4-7 7-7s7 3 7 7"></path>
+                </svg>
+            </a>
+            <div class="cart-badge" data-count="0">
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 6h15l-1.5 9h-12L6 6z"></path>
+                    <circle cx="9" cy="20" r="1"></circle>
+                    <circle cx="18" cy="20" r="1"></circle>
+                    <path d="M6 6L5 3H2"></path>
+                </svg>
+            </div>
+            <!-- Hamburger menu button -->
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12" class="line-mid"></line>
+                    <line x1="3" y1="6" x2="21" y2="6" class="line-top"></line>
+                    <line x1="3" y1="18" x2="21" y2="18" class="line-bot"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Login Split-screen Section -->
+    <section class="login-section">
+        <!-- Left Column: Visual Showcase -->
+        <div class="login-left">
+            <img src="assets/login-bg.webp" alt="Moody abstract luxury watch reflections" class="login-left-bg">
+            <div class="login-left-content">
+                <span class="section-subtitle">Exclusive Access</span>
+                <h2>The Collector's Atelier</h2>
+                <p>Register your serial numbers, book maintenance drop-offs, and receive priority access to limited series releases.</p>
+            </div>
+        </div>
+
+        <!-- Right Column: Login Card -->
+        <div class="login-right">
+            <div class="login-card glass-panel">
+                <!-- Tab Switchers -->
+                <div class="login-tabs">
+                    <div class="login-tab-btn active">Sign In</div>
+                    <div class="login-tab-btn">Register</div>
+                </div>
+
+                <!-- Form 1: Login -->
+                <div class="login-form-container active">
+                    <h3>Welcome Back</h3>
+                    <p class="subtitle">Please enter your credentials to log in.</p>
+                    
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label>Atelier Portal Role</label>
+                            <div class="role-selector">
+                                <div class="role-option active">
+                                    <input type="radio" name="login-role" value="customer" checked style="display: none;">
+                                    Customer
+                                </div>
+                                <div class="role-option">
+                                    <input type="radio" name="login-role" value="admin" style="display: none;">
+                                    Administrator
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-email">Email Address</label>
+                            <input type="email" id="login-email" placeholder="collector@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" placeholder="••••••••" required>
+                        </div>
+
+                        <div class="login-options">
+                            <label class="remember-me">
+                                <input type="checkbox"> Remember me
+                            </label>
+                            <a href="#" class="forgot-pass" onclick="event.preventDefault(); const old=this.textContent; this.textContent='Link Sent!'; setTimeout(()=>this.textContent=old, 2500);">Forgot Password?</a>
+                        </div>
+
+                        <button type="submit" class="btn-primary login-submit-btn">Sign In to Atelier</button>
+                    </form>
+                </div>
+
+                <!-- Form 2: Register -->
+                <div class="login-form-container">
+                    <h3>Create Account</h3>
+                    <p class="subtitle">Join our collector circle for exclusive services.</p>
+                    
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label>Atelier Registration Role</label>
+                            <div class="role-selector">
+                                <div class="role-option active">
+                                    <input type="radio" name="login-role" value="customer" checked style="display: none;">
+                                    Customer
+                                </div>
+                                <div class="role-option">
+                                    <input type="radio" name="login-role" value="admin" style="display: none;">
+                                    Administrator
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-name">Your Full Name</label>
+                            <input type="text" id="reg-name" placeholder="Johnathan Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-email">Email Address</label>
+                            <input type="email" id="reg-email" placeholder="collector@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reg-password">Password</label>
+                            <input type="password" id="reg-password" placeholder="Min. 8 characters" minlength="8" required>
+                        </div>
+
+                        <div class="login-options" style="justify-content: flex-start; gap: 8px;">
+                            <label class="remember-me" style="text-align: left;">
+                                <input type="checkbox" required> I agree to the <a href="404.html" style="color: var(--accent-gold); text-decoration: underline;">Terms & Conditions</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary login-submit-btn">Register Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GSAP and AOS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Main Logic Script -->
+    <script src="main.js"></script>
+</body>
+</html>

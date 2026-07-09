@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maintain your luxury timepiece with Stackly's restoration services. Secure booking for calibrations, polishing, and waterproofing.">
+    <title>Service & Care | Stackly</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Scroll Animations CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="collection.html" class="nav-link">Collection</a>
+            <a href="service.html" class="nav-link active">Services</a>
+        </nav>
+        
+        <div class="header-actions">
+            <a href="login.html">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M5 20c0-4 4-7 7-7s7 3 7 7"></path>
+                </svg>
+            </a>
+            <div class="cart-badge" data-count="0">
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 6h15l-1.5 9h-12L6 6z"></path>
+                    <circle cx="9" cy="20" r="1"></circle>
+                    <circle cx="18" cy="20" r="1"></circle>
+                    <path d="M6 6L5 3H2"></path>
+                </svg>
+            </div>
+            <!-- Hamburger menu button -->
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12" class="line-mid"></line>
+                    <line x1="3" y1="6" x2="21" y2="6" class="line-top"></line>
+                    <line x1="3" y1="18" x2="21" y2="18" class="line-bot"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 1. Service Hero Section -->
+    <section class="about-hero" style="height: 60vh;">
+        <img src="assets/service-diagnostics.webp" alt="Watchmaker diagnostics overview" class="about-hero-bg">
+        <div class="about-hero-content">
+            <span class="section-subtitle">Preserving Time</span>
+            <h1>Restoration & Care</h1>
+            <p>Every mechanical masterpiece requires occasional calibration to counter gravity and wear. Our master watchmakers return your watch to factory specifications.</p>
+        </div>
+    </section>
+
+    <!-- 2. Maintenance Rates Directory Section -->
+    <section class="service-rates">
+        <div class="section-header" style="text-align: center;">
+            <span class="section-subtitle">Servicing Options</span>
+            <h2 class="section-title">Maintenance Packages</h2>
+            
+            <div class="pricing-toggle">
+                <span class="pricing-toggle-btn active">Single Service</span>
+                <div class="toggle-switch" id="pricingToggle"></div>
+                <span class="pricing-toggle-btn">Annual Care Plan</span>
+            </div>
+        </div>
+        
+        <div class="pricing-grid">
+            <!-- Package 1 -->
+            <div class="pricing-card glass-panel">
+                <h4>Refinishing Polish</h4>
+                <div class="pricing-price"><span class="pricing-price-val">$350</span><span class="pricing-cycle">/ single service</span></div>
+                <ul class="pricing-features">
+                    <li>Case & bracelet disassembly</li>
+                    <li>Satin-brushing & hand polishing</li>
+                    <li>Ultrasonic grime removal</li>
+                    <li>Waterproof seal validation</li>
+                </ul>
+                <a href="#booking" class="btn-secondary" style="width: 100%;">Book Service</a>
+            </div>
+
+            <!-- Package 2 (Featured) -->
+            <div class="pricing-card glass-panel featured-card">
+                <h4 style="color: var(--accent-gold);">Complete Calibrating</h4>
+                <div class="pricing-price"><span class="pricing-price-val">$750</span><span class="pricing-cycle">/ single service</span></div>
+                <ul class="pricing-features">
+                    <li>Complete movement disassembly</li>
+                    <li>Ultrasonic wash of gears</li>
+                    <li>Escapement wheel lubrication</li>
+                    <li>Time-calibration under 5 positions</li>
+                    <li>2-Year service warranty</li>
+                </ul>
+                <a href="#booking" class="btn-primary" style="width: 100%;">Book Service</a>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="pricing-card glass-panel">
+                <h4>Full Restoration</h4>
+                <div class="pricing-price"><span class="pricing-price-val">$1,500</span><span class="pricing-cycle">/ single service</span></div>
+                <ul class="pricing-features">
+                    <li>Vintage movement restoration</li>
+                    <li>Replacement of worn gears</li>
+                    <li>Original hands & dial matching</li>
+                    <li>Satin finish case restoration</li>
+                    <li>Comprehensive historical report</li>
+                </ul>
+                <a href="#booking" class="btn-secondary" style="width: 100%;">Book Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Restorative Process Workflow Section -->
+    <section class="process">
+        <div class="section-header" style="text-align: center;">
+            <span class="section-subtitle">Crafted Journey</span>
+            <h2 class="section-title">The Servicing Journey</h2>
+        </div>
+        
+        <div class="process-steps">
+            <div class="process-step">
+                <span class="step-number">01</span>
+                <h4>Diagnostics</h4>
+                <p>We test dial rate, balance amplitude, and magnetic friction to identify structural errors.</p>
+            </div>
+            
+            <div class="process-step">
+                <span class="step-number">02</span>
+                <h4>Disassembly</h4>
+                <p>The case is separated and movement is stripped down to individual gears, jewels, and bridges.</p>
+            </div>
+
+            <div class="process-step">
+                <span class="step-number">03</span>
+                <h4>Calibrating</h4>
+                <p>Parts are cleaned, lubricated, and hand-adjusted for timing drift in multiple gravity positions.</p>
+            </div>
+
+            <div class="process-step">
+                <span class="step-number">04</span>
+                <h4>Gaskets</h4>
+                <p>All seal gaskets are replaced, and crowns are tested in pressure chamber up to 10 ATM.</p>
+            </div>
+
+            <div class="process-step">
+                <span class="step-number">05</span>
+                <h4>Verification</h4>
+                <p>A rigorous 48-hour automated test runs to confirm sweep consistency before final shipping.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. The Service Guarantee Section -->
+    <section class="craftsmanship" style="background-color: var(--bg-primary);">
+        <div class="craft-images">
+            <img src="assets/craftsmanship.webp" alt="High precision testing detail" class="craft-img-large" style="width: 100%;">
+        </div>
+        <div class="craft-content">
+            <span class="section-subtitle">Ultimate Security</span>
+            <h2 class="section-title">Our Service Promise</h2>
+            <p style="margin-top: 20px; margin-bottom: 30px;">Every service is backed by our strict commitment to horological heritage. We guarantee that your watch will maintain its structural integrity, aesthetic charm, and mechanical value.</p>
+            <div class="care-grid" style="margin-top: 20px; text-align: left;">
+                <div style="margin-bottom: 20px;">
+                    <h4 style="font-size: 1.1rem; color: var(--accent-gold); margin-bottom: 5px;">✓ Original Swiss Components</h4>
+                    <p style="font-size: 0.85rem;">We only use authentic factory parts directly imported from Switzerland, maintaining historical resale values.</p>
+                </div>
+                <div>
+                    <h4 style="font-size: 1.1rem; color: var(--accent-gold); margin-bottom: 5px;">✓ 2-Year Performance Guarantee</h4>
+                    <p style="font-size: 0.85rem;">Any timing deviations or waterproofing seal failures are fully repaired free of charge for 24 months post-service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Service Reservation Scheduler (Booking) Section -->
+    <section class="booking" id="booking">
+        <div class="section-header" style="text-align: center;">
+            <span class="section-subtitle">Secure Booking</span>
+            <h2 class="section-title">Schedule Servicing</h2>
+        </div>
+        
+        <div class="booking-form-wrapper glass-panel">
+            <form id="bookingForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Your Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="watch-model">Timepiece Model</label>
+                        <select id="watch-model" required>
+                            <option value="" disabled selected>Select Watch Model</option>
+                            <option value="Classic Gold">Classic Gold</option>
+                            <option value="Chronograph Steel">Chronograph Steel</option>
+                            <option value="Rose Minimalist">Rose Minimalist</option>
+                            <option value="Eclipse Special">Eclipse Special</option>
+                            <option value="Vintage / Other">Vintage / Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-type">Service Required</label>
+                        <select id="service-type" required>
+                            <option value="" disabled selected>Select Service Package</option>
+                            <option value="Refinishing Polish">Refinishing Polish ($350)</option>
+                            <option value="Complete Calibrating">Complete Calibrating ($750)</option>
+                            <option value="Full Restoration">Full Restoration ($1,500)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-date">Preferred Pick-Up Date</label>
+                        <input type="date" id="booking-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serial-no">Serial Number (Optional)</label>
+                        <input type="text" id="serial-no" placeholder="e.g. OR-87291-CH">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="notes">Condition Notes / Symptoms</label>
+                        <textarea id="notes" rows="4" placeholder="Describe any scratches, lag in time sweep, or mechanical symptoms..."></textarea>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="submit" class="btn-primary" style="padding: 15px 50px;">Request Courier Handover</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Huge low-opacity watermark in background -->
+        <div class="footer-watermark">STACKLY</div>
+        
+        <div class="footer-top">
+            <div class="footer-brand-col">
+                <a href="index.html" class="logo footer-logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+                <p class="footer-tagline">Horological masterpieces hand-assembled in Geneva, Switzerland since 1920. Guided by absolute precision, fueled by timeless passion.</p>
+                <div class="luxury-badges">
+                    <span class="luxury-badge">SWISS MADE</span>
+                    <span class="luxury-badge">COSC CERTIFIED</span>
+                </div>
+            </div>
+            
+            <div class="footer-links-col">
+                <h5>Boutique</h5>
+                <ul>
+                    <li><a href="index.html">Home Boutique</a></li>
+                    <li><a href="about.html">Our Heritage</a></li>
+                    <li><a href="collection.html">The Collection</a></li>
+                    <li><a href="service.html">Services & Care</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="service.html#booking">Book Calibration</a></li>
+                    <li><a href="about.html#heritage">Timeline Milestones</a></li>
+                    <li><a href="collection.html">Private Allocation</a></li>
+                    <li><a href="login.html">Collector Portal</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter-col">
+                <h5>Atelier Newsletter</h5>
+                <p>Subscribe to receive private sales invitations, limited caliber releases, and horological updates.</p>
+                <form class="newsletter-form-modern" onsubmit="event.preventDefault(); const btn=this.querySelector('button span'); const old=btn.textContent; btn.textContent='Subscribed!'; setTimeout(()=>btn.textContent=old, 2500); this.reset();">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">
+                        <span>Subscribe</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </form>
+                <div class="footer-socials">
+                    <a href="404.html" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M17 2H7C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5zm-5 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm5.5-8.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/></svg>
+                    </a>
+                    <a href="404.html" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.517 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor"/></svg>
+                    </a>
+                    <a href="404.html" aria-label="Pinterest">
+                        <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C10.743 23.839 11.362 24 12 24c6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2026 Stackly S.A. All rights reserved. Handcrafted with Swiss precision.</p>
+                <div class="legal-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <span class="divider">•</span>
+                    <a href="404.html">Terms of Service</a>
+                    <span class="divider">•</span>
+                    <a href="404.html">Heritage Registry</a>
+                </div>
+            </div>
+            <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to Top">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+    </footer>
+
+    <!-- GSAP and AOS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Main Logic Script -->
+    <script src="main.js"></script>
+</body>
+</html>

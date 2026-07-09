@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience time like never before with Stackly - Handcrafted luxury Swiss timepieces designed for ultimate precision, elegance, and heritage.">
+    <title>Stackly | Premium Luxury Timepieces</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Scroll Animations CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="collection.html" class="nav-link">Collection</a>
+            <a href="service.html" class="nav-link">Services</a>
+            <a href="login.html" class="nav-link">Login</a>
+        </nav>
+        
+        <div class="header-actions">
+            <!-- Profile SVG Icon -->
+            <a href="login.html">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M5 20c0-4 4-7 7-7s7 3 7 7"></path>
+                </svg>
+            </a>
+            <!-- Shopping Cart SVG Icon -->
+            <div class="cart-badge" data-count="0">
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 6h15l-1.5 9h-12L6 6z"></path>
+                    <circle cx="9" cy="20" r="1"></circle>
+                    <circle cx="18" cy="20" r="1"></circle>
+                    <path d="M6 6L5 3H2"></path>
+                </svg>
+            </div>
+            <!-- Hamburger menu button -->
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12" class="line-mid"></line>
+                    <line x1="3" y1="6" x2="21" y2="6" class="line-top"></line>
+                    <line x1="3" y1="18" x2="21" y2="18" class="line-bot"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-glow"></div>
+        <canvas id="heroParticles"></canvas>
+        
+        <div class="hero-main">
+            <div class="hero-content">
+                <p class="hero-subtitle">Capturing Life</p>
+                <h1 class="hero-title">
+                    ONE SECOND<br>
+                    <span class="italic-serif">at a</span> TIME
+                </h1>
+                
+                <div class="hero-watch-container">
+                    <img src="assets/hero-watch.webp" alt="Stackly Classic Gold Chronograph Watch" class="hero-watch-image">
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-bottom">
+            <p class="hero-desc">
+                Experience time like never before, with each second revealing a new chapter in the story of precision, craftsmanship, and elegance.
+            </p>
+            <div class="hero-action">
+                <a href="collection.html" class="btn-primary">Shop now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Philosophy & Brand Stats Section -->
+    <section class="philosophy">
+        <!-- Floating background gear -->
+        <svg class="bg-gear bg-gear-1" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="50" cy="50" r="15"/>
+            <circle cx="50" cy="50" r="30" stroke-dasharray="6,4"/>
+            <path d="M50 5v15M50 80v15M5 50h15M80 50h15M18 18l11 11M71 71l11 11M18 82l11-11M71 29l11-11" stroke-linecap="round"/>
+        </svg>
+        <div class="philosophy-text" data-aos="fade-right">
+            <span class="philosophy-accent-title">The Essence of Heritage</span>
+            <h2>Timeless Values, Measured in Seconds</h2>
+            <p>At Stackly, we believe a watch is more than an instrument of measure; it is a canvas of heritage, a tribute to human focus, and a companion through generations. Each of our movements is calibrated by hand in Switzerland to achieve near-infinite durability.</p>
+            <a href="about.html" class="btn-secondary">Explore Our Heritage</a>
+        </div>
+        <div class="philosophy-stats">
+            <div class="stat-card glass-panel glass-panel-glow" data-aos="zoom-in" data-aos-delay="100">
+                <h3>1920</h3>
+                <p>Founding Year</p>
+            </div>
+            <div class="stat-card glass-panel glass-panel-glow" data-aos="zoom-in" data-aos-delay="200">
+                <h3>28</h3>
+                <p>Jewels in Movement</p>
+            </div>
+            <div class="stat-card glass-panel glass-panel-glow" data-aos="zoom-in" data-aos-delay="300">
+                <h3>100%</h3>
+                <p>Hand Assembled</p>
+            </div>
+            <div class="stat-card glass-panel glass-panel-glow" data-aos="zoom-in" data-aos-delay="400">
+                <h3>25yr</h3>
+                <p>Limited Warranty</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Featured Masterpieces Section -->
+    <section class="featured">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">Curated Gallery</span>
+            <h2 class="section-title">The Signature Selection</h2>
+        </div>
+        
+        <div class="featured-grid">
+            <!-- Watch 1 -->
+            <div class="watch-card glass-panel glass-panel-glow" data-category="classic" data-id="1" data-aos="fade-up" data-aos-delay="100">
+                <span class="watch-badge">Best Seller</span>
+                <div class="watch-card-img-wrapper">
+                    <img src="assets/model-classic.webp" alt="Stackly Classic Gold">
+                </div>
+                <h4>Classic Gold</h4>
+                <span class="collection-name">Heritage Series</span>
+                <span class="price">$1,450.00</span>
+                <button class="btn-secondary btn-card btn-add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Watch 2 -->
+            <div class="watch-card glass-panel glass-panel-glow" data-category="chrono" data-id="2" data-aos="fade-up" data-aos-delay="200">
+                <div class="watch-card-img-wrapper">
+                    <img src="assets/model-chrono.webp" alt="Stackly Chronograph Steel">
+                </div>
+                <h4>Chronograph Steel</h4>
+                <span class="collection-name">Pioneer Series</span>
+                <span class="price">$1,850.00</span>
+                <button class="btn-secondary btn-card btn-add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Watch 3 -->
+            <div class="watch-card glass-panel glass-panel-glow" data-category="minimalist" data-id="3" data-aos="fade-up" data-aos-delay="300">
+                <div class="watch-card-img-wrapper">
+                    <img src="assets/model-minimalist.webp" alt="Stackly Minimalist Rose">
+                </div>
+                <h4>Rose Minimalist</h4>
+                <span class="collection-name">Modern Slimline</span>
+                <span class="price">$1,200.00</span>
+                <button class="btn-secondary btn-card btn-add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Art of Craftsmanship Section -->
+    <section class="craftsmanship">
+        <div class="craft-images" data-aos="fade-right">
+            <img src="assets/craftsmanship.webp" alt="Macro watch assembly details" class="craft-img-large">
+            <img src="assets/about-hero.webp" alt="Mechanical gears background details" class="craft-img-small">
+        </div>
+        <div class="craft-content" data-aos="fade-left">
+            <span class="section-subtitle">Micro-engineering</span>
+            <h2 class="section-title">Anatomy of a Masterpiece</h2>
+            <p style="margin-top: 20px;">Every timepiece undergoes over 250 quality checks before leaving our ateliers. From the sapphire-covered dials to the micro-rubies stabilizing the mainspring, excellence is our starting line.</p>
+            
+            <div class="craft-accordion">
+                <div class="accordion-item active">
+                    <div class="accordion-header">
+                        <h4>Caliber .901 mechanical movement</h4>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Fully in-house developed automatic caliber with a 72-hour power reserve. Utilizes structural rubies and a custom balance wheel for chronometric precision.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>9-Grade Sapphire Crystal</h4>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Scratch-proof synthetic crystal with triple anti-reflective coating on the interior, guaranteeing ultimate legibility under direct sunlight.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>Tanned Shell Cordovan Leather</h4>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Responsibly sourced Italian leather straps, vegetable-tanned over six months, ensuring a soft feel that develops a beautiful unique patina over time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Curated Combinations Section -->
+    <section class="combinations">
+        <!-- Floating background gear -->
+        <svg class="bg-gear bg-gear-2" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="50" cy="50" r="20"/>
+            <circle cx="50" cy="50" r="10"/>
+            <path d="M50 2v8M50 90v8M2 50h8M90 50h8M16 16l6 6M78 78l6 6M16 84l6-6M78 22l6-6" stroke-linecap="round"/>
+            <circle cx="50" cy="50" r="35" stroke-dasharray="4,6"/>
+        </svg>
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">Curated Styles</span>
+            <h2 class="section-title">Perfect Pairings</h2>
+        </div>
+        
+        <div class="combo-display glass-panel" data-aos="zoom-in">
+            <div class="combo-part">
+                <img src="assets/model-classic.webp" alt="Classic watch face" style="max-height: 180px;">
+                <span>The Case</span>
+                <h4>18k Gold Bezel</h4>
+            </div>
+            <div class="combo-plus">+</div>
+            <div class="combo-part">
+                <img src="assets/model-minimalist.webp" alt="Tanned leather strap" style="max-height: 180px; object-fit: cover; clip-path: inset(40% 0% 0% 0%);">
+                <span>The Strap</span>
+                <h4>Shell Cordovan Calfskin</h4>
+            </div>
+            <div class="combo-total">
+                <span>Bundle Offer</span>
+                <h3>The Gold Heritage Set</h3>
+                <div class="combo-price">$1,990</div>
+                <button class="btn-primary btn-add-to-cart">Order Set</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">Voices of Connoisseurs</span>
+            <h2 class="section-title">The Collector's Verdict</h2>
+        </div>
+        
+        <div class="testimonial-carousel glass-panel" data-aos="fade-up">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide active">
+                <p class="testimonial-quote">"The weight of the Chronograph Steel on the wrist, combined with its flawless mechanical sweep, makes it a true heirloom. I haven't taken it off in months."</p>
+                <div class="testimonial-author">Alexander Vance</div>
+                <div class="testimonial-title">Senior Curator, Time & Tide</div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-quote">"In an era of disposable smartwatches, wearing the Classic Gold feels like a rebellion. The dial detailing under a loupe is absolutely mind-blowing."</p>
+                <div class="testimonial-author">Helena Moretti</div>
+                <div class="testimonial-title">Founder, Horological Society</div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-quote">"Their customer support is as precise as their calibers. The servicing was thorough, quick, and returned my grandfather's watch looking brand new."</p>
+                <div class="testimonial-author">Dr. Richard Lin</div>
+                <div class="testimonial-title">Vintage Watch Collector</div>
+            </div>
+
+            <!-- Dots -->
+            <div class="carousel-nav">
+                <div class="carousel-dot active"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Press / Media Logotypes Section -->
+    <section class="press">
+        <div class="press-grid">
+            <div class="press-logo" data-aos="fade-up" data-aos-delay="100">GQ MAGAZINE</div>
+            <div class="press-logo" data-aos="fade-up" data-aos-delay="200">HODINKEE</div>
+            <div class="press-logo" data-aos="fade-up" data-aos-delay="300">VOGUE</div>
+            <div class="press-logo" data-aos="fade-up" data-aos-delay="400">ROBB REPORT</div>
+        </div>
+    </section>
+
+    <!-- 8. Care & Servicing Preview Section -->
+    <section class="care-preview">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">Preservation & Care</span>
+            <h2 class="section-title">Protecting Your Heirloom</h2>
+        </div>
+        
+        <div class="care-grid">
+            <div class="care-card glass-panel glass-panel-glow" data-aos="fade-up" data-aos-delay="100">
+                <div class="care-card-icon">⚡</div>
+                <h4>Complete Calibration</h4>
+                <p>Disassembly, ultrasonic cleaning, lubrication, and adjustment of the balance wheel. We ensure the heart of your watch beats perfectly.</p>
+                <a href="service.html" class="care-link">Learn More</a>
+            </div>
+            
+            <div class="care-card glass-panel glass-panel-glow" data-aos="fade-up" data-aos-delay="200">
+                <div class="care-card-icon">🛡️</div>
+                <h4>Waterproofing Seals</h4>
+                <p>Replacement of all crown, case-back, and pusher gaskets followed by modern pressure chamber verification up to 10 ATM.</p>
+                <a href="service.html" class="care-link">Learn More</a>
+            </div>
+
+            <div class="care-card glass-panel glass-panel-glow" data-aos="fade-up" data-aos-delay="300">
+                <div class="care-card-icon">✨</div>
+                <h4>Fine Refinishing</h4>
+                <p>Gentle hand-polishing and satin-finishing of metal cases and bracelets to remove scratches while keeping original geometry intact.</p>
+                <a href="service.html" class="care-link">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Newsletter & Footer Section -->
+    <footer class="footer">
+        <!-- Huge low-opacity watermark in background -->
+        <div class="footer-watermark">STACKLY</div>
+        
+        <div class="footer-top">
+            <div class="footer-brand-col">
+                <a href="index.html" class="logo footer-logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+                <p class="footer-tagline">Horological masterpieces hand-assembled in Geneva, Switzerland since 1920. Guided by absolute precision, fueled by timeless passion.</p>
+                <div class="luxury-badges">
+                    <span class="luxury-badge">SWISS MADE</span>
+                    <span class="luxury-badge">COSC CERTIFIED</span>
+                </div>
+            </div>
+            
+            <div class="footer-links-col">
+                <h5>Boutique</h5>
+                <ul>
+                    <li><a href="index.html">Home Boutique</a></li>
+                    <li><a href="about.html">Our Heritage</a></li>
+                    <li><a href="collection.html">The Collection</a></li>
+                    <li><a href="service.html">Services & Care</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="service.html#booking">Book Calibration</a></li>
+                    <li><a href="about.html#heritage">Timeline Milestones</a></li>
+                    <li><a href="collection.html">Private Allocation</a></li>
+                    <li><a href="login.html">Collector Portal</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter-col">
+                <h5>Atelier Newsletter</h5>
+                <p>Subscribe to receive private sales invitations, limited caliber releases, and horological updates.</p>
+                <form class="newsletter-form-modern" onsubmit="event.preventDefault(); const btn=this.querySelector('button span'); const old=btn.textContent; btn.textContent='Subscribed!'; setTimeout(()=>btn.textContent=old, 2500); this.reset();">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">
+                        <span>Subscribe</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </form>
+                <div class="footer-socials">
+                    <a href="404.html" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M17 2H7C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5zm-5 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm5.5-8.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/></svg>
+                    </a>
+                    <a href="404.html" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.517 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor"/></svg>
+                    </a>
+                    <a href="404.html" aria-label="Pinterest">
+                        <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C10.743 23.839 11.362 24 12 24c6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2026 Stackly S.A. All rights reserved. Handcrafted with Swiss precision.</p>
+                <div class="legal-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <span class="divider">•</span>
+                    <a href="404.html">Terms of Service</a>
+                    <span class="divider">•</span>
+                    <a href="404.html">Heritage Registry</a>
+                </div>
+            </div>
+            <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to Top">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+    </footer>
+
+    <!-- GSAP and AOS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Main Logic Script -->
+    <script src="main.js"></script>
+</body>
+</html>

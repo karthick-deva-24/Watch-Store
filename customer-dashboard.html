@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Collector Portal - Access your owned luxury Swiss timepieces, registered serial keys, active calibration bookings, and private editions.">
+    <title>Collector Portal | Stackly</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Scroll Animations CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+    <div class="db-container">
+        <!-- Sidebar Navigation -->
+        <aside class="db-sidebar">
+            <div class="db-sidebar-top">
+                <a href="index.html" class="db-logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+                
+                <nav class="db-nav">
+                    <a href="#collection" class="db-nav-link active">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="9"></rect>
+                            <rect x="14" y="3" width="7" height="5"></rect>
+                            <rect x="14" y="12" width="7" height="9"></rect>
+                            <rect x="3" y="16" width="7" height="5"></rect>
+                        </svg>
+                        <span>My Collection</span>
+                    </a>
+                    <a href="#registry" class="db-nav-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <span>Guarantee Registry</span>
+                    </a>
+                    <a href="#service" class="db-nav-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                        <span>Service Status</span>
+                    </a>
+                    <a href="collection.html" class="db-nav-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>Private Catalog</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- User Panel -->
+            <div class="db-user-panel">
+                <div class="db-avatar">AV</div>
+                <div class="db-user-info">
+                    <h5>Alexander Vance</h5>
+                    <span>VIP Collector</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="db-main">
+            <!-- Header section -->
+            <header class="db-header" data-aos="fade-down">
+                <div class="db-header-title">
+                    <h2>Collector Atelier</h2>
+                    <p>Welcome back, Mr. Vance. Access your certified Swiss watch vault.</p>
+                </div>
+                <button class="db-logout-btn" onclick="location.href='login.html';">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+                    <span>Logout</span>
+                </button>
+            </header>
+
+            <!-- Tab 1: Collection -->
+            <div id="collection-tab" class="db-tab-content active">
+                <!-- Stats metric row -->
+                <section class="db-stats-row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="db-stat-card glass-panel glass-panel-glow">
+                        <span>Owned Masterpieces</span>
+                        <h3>02</h3>
+                        <p>Calibers in Vault</p>
+                    </div>
+                    <div class="db-stat-card glass-panel glass-panel-glow">
+                        <span>Calibration Tickets</span>
+                        <h3>01 <span style="font-size: 1rem; color: #f1c40f;">Active</span></h3>
+                        <p>Swiss Workshop Care</p>
+                    </div>
+                    <div class="db-stat-card glass-panel glass-panel-glow">
+                        <span>Lifetime Warranty</span>
+                        <h3>25 yr</h3>
+                        <p>Registry Protection</p>
+                    </div>
+                </section>
+
+                <section class="glass-panel" style="padding: 40px; margin-bottom: 20px;" data-aos="fade-up" data-aos-delay="200" id="collection">
+                    <div class="db-card-header">
+                        <h4>Atelier Vault</h4>
+                        <a href="collection.html">+ Acquire Timepiece</a>
+                    </div>
+
+                    <div class="db-watch-grid">
+                        <!-- Watch 1 -->
+                        <div class="watch-card glass-panel" style="margin: 0; background: rgba(255,255,255,0.01);">
+                            <span class="watch-badge" style="background-color: var(--accent-gold); color: var(--bg-primary);">Vaulted</span>
+                            <div class="watch-card-img-wrapper">
+                                <img src="assets/model-classic.webp" alt="Stackly Classic Gold">
+                            </div>
+                            <h4>Classic Gold</h4>
+                            <span class="collection-name">Acquired June 2024</span>
+                            <span class="price">$1,450.00</span>
+                        </div>
+
+                        <!-- Watch 2 -->
+                        <div class="watch-card glass-panel" style="margin: 0; background: rgba(255,255,255,0.01);">
+                            <span class="watch-badge" style="background-color: var(--accent-gold); color: var(--bg-primary);">Vaulted</span>
+                            <div class="watch-card-img-wrapper">
+                                <img src="assets/model-chrono.webp" alt="Stackly Chronograph Steel">
+                            </div>
+                            <h4>Chronograph Steel</h4>
+                            <span class="collection-name">Acquired Oct 2025</span>
+                            <span class="price">$1,850.00</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Tab 2: Guarantee Registry -->
+            <div id="registry-tab" class="db-tab-content">
+                <section class="glass-panel db-visual-box" data-aos="fade-up" id="registry">
+                    <div class="db-card-header" style="width: 100%;">
+                        <h4>Guarantee Card</h4>
+                    </div>
+                    <img src="assets/customer-cert.webp" alt="Swiss Guarantee Certificate Card" class="db-visual-img">
+                    <span style="font-size: 0.75rem; letter-spacing: 0.15em; color: var(--accent-gold); text-transform: uppercase;">Ownership Certified</span>
+                    <h5 style="margin: 10px 0 5px 0; font-size: 1.1rem; font-weight: 500;">Secured Serial Vault</h5>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary);">This certificate guarantees the authenticity and calibration registry of your Stackly collection.</p>
+                </section>
+            </div>
+
+            <!-- Tab 3: Service Status -->
+            <div id="service-tab" class="db-tab-content">
+                <section class="glass-panel" style="padding: 40px; margin-bottom: 20px;" data-aos="fade-up" id="service">
+                    <div class="db-card-header">
+                        <h4>Boutique Calibration & Servicing Queue</h4>
+                        <a href="service.html#booking">Book Calibration</a>
+                    </div>
+
+                    <div class="db-table-wrapper">
+                        <table class="db-table">
+                            <thead>
+                                <tr>
+                                    <th>Registry ID</th>
+                                    <th>Model & Caliber</th>
+                                    <th>Service Category</th>
+                                    <th>Atelier Status</th>
+                                    <th>Expected Handover</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#OR-8829-X</td>
+                                    <td>Chronograph Steel (Caliber .901)</td>
+                                    <td>Calibre Recalibration</td>
+                                    <td><span class="db-badge db-badge-warning">In Calibration</span></td>
+                                    <td>July 24, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>#OR-1102-Y</td>
+                                    <td>Classic Gold (Caliber .850)</td>
+                                    <td>Waterproofing Seals Replacement</td>
+                                    <td><span class="db-badge db-badge-success">Completed</span></td>
+                                    <td>Oct 12, 2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- GSAP and AOS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Main Logic Script -->
+    <script src="main.js"></script>
+</body>
+</html>

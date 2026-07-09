@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporal Deviation - Page Not Found. Return to the present at Stackly Swiss atelier.">
+    <title>Lost in Time | Stackly</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        .error-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at center, rgba(30, 24, 16, 0.4) 0%, rgba(7, 7, 7, 1) 70%);
+        }
+        .error-container {
+            text-align: center;
+            z-index: 2;
+            max-width: 600px;
+            padding: 20px;
+        }
+        .gear-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 40px auto;
+        }
+        /* SVG Gear rotations */
+        .gear-main {
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            top: 45px;
+            left: 45px;
+            color: var(--accent-gold);
+            transform-origin: center;
+        }
+        .gear-sub-1 {
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            top: 15px;
+            left: 150px;
+            color: #8d7362;
+            transform-origin: center;
+        }
+        .gear-sub-2 {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 125px;
+            left: 10px;
+            color: rgba(197, 168, 128, 0.5);
+            transform-origin: center;
+        }
+        .error-code {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            font-weight: 300;
+            color: var(--bg-primary);
+            z-index: 5;
+            letter-spacing: 0.05em;
+            pointer-events: none;
+            /* circular gold background to make it look like a dial center */
+            background: var(--accent-gold);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(197, 168, 128, 0.4);
+        }
+        .error-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+        .error-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .error-btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        /* Particles Canvas for 404 */
+        #canvas404Particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="error-section">
+        <!-- Canvas for drifting temporal stars/particles -->
+        <canvas id="canvas404Particles"></canvas>
+
+        <div class="error-container">
+            <!-- Gear animation box -->
+            <div class="gear-container" data-aos="zoom-in" data-aos-duration="1200">
+                <!-- Outer gears -->
+                <svg class="gear-sub-1" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="50" cy="50" r="28" stroke-dasharray="6,4"></circle>
+                    <path d="M50 10v12M50 78v12M10 50h12M78 50h12M22 22l8 8M70 70l8 8M22 78l8-8M70 22l8-8" stroke-linecap="round"></path>
+                    <circle cx="50" cy="50" r="10"></circle>
+                </svg>
+
+                <svg class="gear-sub-2" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="50" cy="50" r="30" stroke-dasharray="4,6"></circle>
+                    <path d="M50 5v15M50 80v15M5 50h15M80 50h15M18 18l10 10M72 72l10 10M18 72l10-10M72 18l10-10" stroke-linecap="round"></path>
+                    <circle cx="50" cy="50" r="8"></circle>
+                </svg>
+
+                <!-- Center Main Gear -->
+                <svg class="gear-main" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="50" cy="50" r="36" stroke-dasharray="10,6"></circle>
+                    <!-- Gear spokes -->
+                    <line x1="50" y1="14" x2="50" y2="86"></line>
+                    <line x1="14" y1="50" x2="86" y2="50"></line>
+                    <line x1="24.5" y1="24.5" x2="75.5" y2="75.5"></line>
+                    <line x1="24.5" y1="75.5" x2="75.5" y2="24.5"></line>
+                    <circle cx="50" cy="50" r="22" fill="var(--bg-primary)" stroke="currentColor"></circle>
+                </svg>
+
+                <!-- 404 Engraved in the middle -->
+                <div class="error-code">404</div>
+            </div>
+
+            <!-- Error message text -->
+            <h1 class="error-title" data-aos="fade-up" data-aos-delay="200">Lost in Time</h1>
+            <p class="error-desc" data-aos="fade-up" data-aos-delay="300">
+                The coordinates you entered have shifted out of calibration. The caliber path is offline, or this moment in time does not exist.
+            </p>
+
+            <!-- Back buttons -->
+            <div class="error-btn-group" data-aos="fade-up" data-aos-delay="400">
+                <button class="btn-primary" onclick="history.back();" style="cursor: pointer;">Previous Page</button>
+                <a href="index.html" class="btn-outline">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GSAP and AOS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Init AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Rotate gears dynamically with GSAP
+        // Main gear rotates clockwise
+        gsap.to(".gear-main", {
+            rotation: 360,
+            duration: 20,
+            repeat: -1,
+            ease: "none"
+        });
+
+        // Sub gear 1 rotates counter-clockwise faster
+        gsap.to(".gear-sub-1", {
+            rotation: -360,
+            duration: 10,
+            repeat: -1,
+            ease: "none"
+        });
+
+        // Sub gear 2 rotates clockwise at different speed
+        gsap.to(".gear-sub-2", {
+            rotation: 360,
+            duration: 14,
+            repeat: -1,
+            ease: "none"
+        });
+
+        // Drifting gold particles on background canvas
+        const canvas = document.getElementById("canvas404Particles");
+        const ctx = canvas.getContext("2d");
+
+        let particles = [];
+        const particleCount = 45;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = Math.random() * 0.4 - 0.2;
+                this.speedY = Math.random() * -0.6 - 0.2; // float upward
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                // Reset particle if it drifts off the screen
+                if (this.y < 0 || this.x < 0 || this.x > canvas.width) {
+                    this.reset();
+                    this.y = canvas.height;
+                }
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(197, 168, 128, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener("resize", () => {
+            resizeCanvas();
+            initParticles();
+        });
+
+        resizeCanvas();
+        initParticles();
+        animate();
+    </script>
+</body>
+</html>
