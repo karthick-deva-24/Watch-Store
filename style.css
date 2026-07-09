@@ -2732,3 +2732,109 @@ header.header-solid {
         justify-content: center;
     }
 }
+
+/* 13. Contact Concierge Page */
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+.support-card {
+    padding: 50px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 300px;
+    transition: var(--transition-smooth);
+}
+.support-card:hover {
+    transform: translateY(-5px);
+}
+.support-icon {
+    font-size: 2.8rem;
+    color: var(--accent-gold);
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+.support-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+}
+.support-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.support-link {
+    color: var(--accent-gold);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+.support-link:hover {
+    color: var(--text-primary);
+}
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+.location-card {
+    padding: 45px 35px;
+    transition: var(--transition-smooth);
+}
+.location-card:hover {
+    transform: translateY(-5px);
+}
+.location-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--accent-gold);
+    border: 1px solid var(--border-glow);
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background: rgba(212, 175, 55, 0.02);
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+.location-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+}
+.location-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.location-card p i {
+    color: var(--accent-gold);
+    width: 16px;
+    text-align: center;
+    font-size: 1rem;
+}
+@media (max-width: 992px) {
+    .faq-split {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    .faq-split-image {
+        order: -1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

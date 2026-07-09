@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connect with Stackly's client advisors. Inquire about custom watch configurations, mechanical restoration, or schedule a private boutique tour.">
+    <title>Contact Concierge | Stackly</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Scroll Animations CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="collection.html" class="nav-link">Collection</a>
+            <a href="service.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+        
+        <div class="header-actions">
+            <a href="login.html">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M5 20c0-4 4-7 7-7s7 3 7 7"></path>
+                </svg>
+            </a>
+            <div class="cart-badge" data-count="0">
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 6h15l-1.5 9h-12L6 6z"></path>
+                    <circle cx="9" cy="20" r="1"></circle>
+                    <circle cx="18" cy="20" r="1"></circle>
+                    <path d="M6 6L5 3H2"></path>
+                </svg>
+            </div>
+            <!-- Hamburger menu button -->
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12" class="line-mid"></line>
+                    <line x1="3" y1="6" x2="21" y2="6" class="line-top"></line>
+                    <line x1="3" y1="18" x2="21" y2="18" class="line-bot"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 1. Contact Hero Section -->
+    <section class="about-hero" style="height: 55vh;">
+        <img src="assets/contact-hero.webp" alt="Luxury watchmaker workspace" class="about-hero-bg" style="filter: brightness(0.35);">
+        <div class="about-hero-content" data-aos="fade-up">
+            <span class="section-subtitle">Atelier Concierge</span>
+            <h1>Connect with Precision</h1>
+            <p>Our client advisors and master watchmakers are ready to assist you. Consult with our Geneva headquarters, request bespoke allocations, or schedule a secure service shipment.</p>
+        </div>
+    </section>
+
+    <!-- 2. Secure Support Channels -->
+    <section class="support-channels-section" style="background-color: var(--bg-secondary); padding: 80px 8% 40px 8%;">
+        <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+            <span class="section-subtitle">Immediate Assistance</span>
+            <h2 class="section-title">Direct Inflow Channels</h2>
+        </div>
+        
+        <div class="support-grid">
+            <!-- Channel 1 -->
+            <div class="support-card glass-panel" data-aos="fade-up" data-aos-delay="100">
+                <div class="support-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <h4>Private Hotline</h4>
+                <p>Speak directly with a client advisor to discuss ongoing allocations or restoration updates.</p>
+                <a href="404.html" class="support-link">+41 (0) 22 901 08 00</a>
+            </div>
+
+            <!-- Channel 2 -->
+            <div class="support-card glass-panel" data-aos="fade-up" data-aos-delay="200">
+                <div class="support-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                <h4>Secure Email</h4>
+                <p>Send secure inquiries regarding order tracking, digital registry authentication, or custom calibre assembly.</p>
+                <a href="404.html" class="support-link">concierge@stackly.ch</a>
+            </div>
+
+            <!-- Channel 3 -->
+            <div class="support-card glass-panel" data-aos="fade-up" data-aos-delay="300">
+                <div class="support-icon"><i class="fa-solid fa-video"></i></div>
+                <h4>Virtual Consultations</h4>
+                <p>Book a private video consultation with our lead case designers to construct a bespoke configuration.</p>
+                <a href="404.html" class="btn-primary" style="margin-top: 15px; font-size: 0.8rem; padding: 10px 20px;">Book Session</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Contact Inquiry Form -->
+    <section class="contact-form-section" style="background-color: var(--bg-primary); padding: 80px 8%;">
+        <div class="section-header" style="text-align: center;">
+            <span class="section-subtitle">Secure Inquiry</span>
+            <h2 class="section-title">Atelier Communication</h2>
+        </div>
+
+        <div class="booking-form-wrapper glass-panel" style="margin-top: 50px;">
+            <form onsubmit="event.preventDefault(); window.location.href = '404.html';">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="contact-name">Your Full Name</label>
+                        <input type="text" id="contact-name" placeholder="Johnathan Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" placeholder="collector@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inquiry-type">Inquiry Classification</label>
+                        <select id="inquiry-type" required>
+                            <option value="" disabled selected>Select Inquiry Type</option>
+                            <option value="private-allocation">Private Timepiece Allocation</option>
+                            <option value="bespoke-commission">Bespoke Design Commission</option>
+                            <option value="calibration-restoration">Calibration & Restoration</option>
+                            <option value="registry-guarantee">Registry & Guarantee Key</option>
+                            <option value="press-corporate">Press / Corporate Inquiries</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="watch-serial">Timepiece Serial No. (Optional)</label>
+                        <input type="text" id="watch-serial" placeholder="e.g. OR-9921-CH">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="contact-message">Inquiry Details</label>
+                        <textarea id="contact-message" rows="5" placeholder="Specify details regarding your calibration requirements, design preferences, or allocation requests..." required></textarea>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button type="submit" class="btn-primary" style="padding: 15px 60px;">Transmit Secure Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- 4. Global Salons Directory -->
+    <section class="locations-section" style="background-color: var(--bg-secondary); padding: 80px 8%;">
+        <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+            <span class="section-subtitle">Atelier Presence</span>
+            <h2 class="section-title">Global Boutique Salons</h2>
+        </div>
+        
+        <div class="locations-grid">
+            <!-- Location 1 -->
+            <div class="location-card glass-panel" data-aos="fade-up" data-aos-delay="100">
+                <span class="location-badge">Headquarters</span>
+                <h4>Geneva Salon</h4>
+                <p class="address"><i class="fa-solid fa-map-pin"></i> Rue du Rhône 42, 1204 Genève, Switzerland</p>
+                <p class="hours"><i class="fa-solid fa-clock"></i> Mon - Fri: 09:00 - 18:30 | Sat: 10:00 - 16:00</p>
+                <p class="phone"><i class="fa-solid fa-phone"></i> +41 (0) 22 901 08 00</p>
+            </div>
+
+            <!-- Location 2 -->
+            <div class="location-card glass-panel" data-aos="fade-up" data-aos-delay="200">
+                <span class="location-badge">Boutique</span>
+                <h4>New York Atelier</h4>
+                <p class="address"><i class="fa-solid fa-map-pin"></i> 743 Fifth Avenue, New York, NY 10022, USA</p>
+                <p class="hours"><i class="fa-solid fa-clock"></i> Mon - Sat: 10:00 - 19:00 | Sun: 12:00 - 17:00</p>
+                <p class="phone"><i class="fa-solid fa-phone"></i> +1 (212) 555-0199</p>
+            </div>
+
+            <!-- Location 3 -->
+            <div class="location-card glass-panel" data-aos="fade-up" data-aos-delay="300">
+                <span class="location-badge">Boutique</span>
+                <h4>London Salon</h4>
+                <p class="address"><i class="fa-solid fa-map-pin"></i> 170 New Bond Street, London W1S 4PT, UK</p>
+                <p class="hours"><i class="fa-solid fa-clock"></i> Mon - Sat: 10:00 - 18:00 | Sun: Closed</p>
+                <p class="phone"><i class="fa-solid fa-phone"></i> +44 (0) 20 7555 0143</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Secure Logistics & Shipping FAQ Checklist -->
+    <section class="concierge-faq" style="background-color: var(--bg-primary); padding: 100px 8%;">
+        <div class="faq-split" style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center;">
+            <div class="faq-split-content" data-aos="fade-right">
+                <span class="section-subtitle">Armored Handover</span>
+                <h2 class="section-title">Secure Delivery Logistics</h2>
+                <p style="margin-top: 20px; margin-bottom: 30px; line-height: 1.8; color: var(--text-secondary);">
+                    Stackly partners with premier armored courier services worldwide. Restorations and bespoke order deliveries are fully insured, climate-controlled, and handled directly by client advisors.
+                </p>
+                
+                <div class="care-grid" style="text-align: left; margin-top: 20px;">
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="font-size: 1.1rem; color: var(--accent-gold); margin-bottom: 5px;"><i class="fa-solid fa-shield-halved" style="margin-right: 8px;"></i>100% Value Transit Insurance</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Every shipment is insured for its full replacement or certified appraisal value, protecting your heirloom globally.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.1rem; color: var(--accent-gold); margin-bottom: 5px;"><i class="fa-solid fa-truck-ramp-box" style="margin-right: 8px;"></i>Bespoke Pickup & Handover</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Book home pick-up via armored courier. Packages are sealed with signature guarantee stickers at the time of hand-off.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-split-image" data-aos="fade-left" style="position: relative;">
+                <img src="assets/concierge-care.webp" alt="High precision timepiece calibration details" class="glass-panel" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-light); filter: brightness(0.75);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-watermark">STACKLY</div>
+        
+        <div class="footer-top">
+            <div class="footer-brand-col">
+                <a href="index.html" class="logo footer-logo"><img src="assets/logo.webp" alt="Stackly Logo"></a>
+                <p class="footer-tagline">Horological masterpieces hand-assembled in Geneva, Switzerland since 1920. Guided by absolute precision, fueled by timeless passion.</p>
+                <div class="luxury-badges">
+                    <span class="luxury-badge">SWISS MADE</span>
+                    <span class="luxury-badge">COSC CERTIFIED</span>
+                </div>
+            </div>
+            
+            <div class="footer-links-col">
+                <h5>Boutique</h5>
+                <ul>
+                    <li><a href="index.html">Home Boutique</a></li>
+                    <li><a href="about.html">Our Heritage</a></li>
+                    <li><a href="collection.html">The Collection</a></li>
+                    <li><a href="service.html">Services & Care</a></li>
+                    <li><a href="contact.html">Contact Concierge</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="service.html#booking">Book Calibration</a></li>
+                    <li><a href="about.html#heritage">Timeline Milestones</a></li>
+                    <li><a href="collection.html">Private Allocation</a></li>
+                    <li><a href="login.html">Collector Portal</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter-col">
+                <h5>Atelier Newsletter</h5>
+                <p>Subscribe to receive private sales invitations, limited caliber releases, and horological updates.</p>
+                <form class="newsletter-form-modern" onsubmit="event.preventDefault(); window.location.href = '404.html';">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">
+                        <span>Subscribe</span>
+                        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </form>
+                <div class="footer-socials">
+                    <a href="404.html" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="404.html" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="404.html" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2026 Stackly S.A. All rights reserved. Handcrafted with Swiss precision.</p>
+                <div class="legal-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <span class="divider">•</span>
+                    <a href="404.html">Terms of Service</a>
+                    <span class="divider">•</span>
+                    <a href="404.html">Heritage Registry</a>
+                </div>
+            </div>
+            <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to Top">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+    </footer>
+
+    <!-- GSAP and AOS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Main Logic Script -->
+    <script src="main.js"></script>
+</body>
+</html>
